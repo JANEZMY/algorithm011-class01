@@ -2,18 +2,38 @@
 
 ## 用add first或add last这套新的API改写Deque的代码
 
-不确定是否是要实现一下这两个函数...
+```java
+// 改写前
+Deque<String> deque = new LinkedList<String>();
+deque.push("a");
+deque.push("b");
+deque.push("e");
+System.out.println(deque);
 
-```python3
-class Deque(object):
-    def __init__(self):
-        self._deque = [] 
+String str = deque.peek();
+System.out.println(str);
+System.out.println(deque);
 
-    def add_first(self, value):
-        return self._deque.insert(0, value)
+while (deque.size() > 0) {
+    System.out.println(deque.pop());
+}
+System.out.println(deque);
 
-    def add_last(self, value):
-		return self._deque.append(value)
+// 改写后
+Deque<String> deque = new LinkedList<>();
+deque.addFirst("a");
+deque.addFirst("b");
+deque.addFirst("e");
+System.out.println(deque);
+
+String str = deque.peekFirst();
+System.out.println(str);
+System.out.println(deque);
+
+while (deque.size() > 0) {
+    System.out.println(deque.pollFirst());
+}
+System.out.println(deque);
 ```
 
 
