@@ -59,7 +59,7 @@ System.out.println(deque);
   - `task_done()`：任务完成，每个`get()`后跟随一个`task_done()`
   - `join()`：阻塞直到队列中所有任务都完成，与`task_done()`配合使用
   
-- `Queue`内部利用`deque`实现（`self.queue = deque()`)，出入队列分别用`deque.popleft/append()`
+- `Queue`内部利用`deque`实现（`self.queue = deque()`，底层是数组)，出入队列分别用`deque.popleft/append()`
 
 - `Priority Queue`内部利用`heapq`与数组实现（`self.queue = []`），出入队列分别用`heapq.heappop/heappush()`
 
