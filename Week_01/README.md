@@ -7,7 +7,7 @@
 Deque<String> deque = new LinkedList<String>();
 deque.push("a");
 deque.push("b");
-deque.push("e");
+deque.push("c");
 System.out.println(deque);
 
 String str = deque.peek();
@@ -23,7 +23,7 @@ System.out.println(deque);
 Deque<String> deque = new LinkedList<>();
 deque.addFirst("a");
 deque.addFirst("b");
-deque.addFirst("e");
+deque.addFirst("c");
 System.out.println(deque);
 
 String str = deque.peekFirst();
